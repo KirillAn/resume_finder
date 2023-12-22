@@ -26,7 +26,7 @@
 
 ### Демо
 
-**Gif**
+![Demo](https://drive.google.com/file/d/1MN22qWdjIzbwTMc68z8G0rCqnS7ZIrh0/view?usp=share_link)
 
 
 ## Установка и запуск
@@ -35,6 +35,8 @@
 
 
 2. Скачать на компьютер проект с GitHub
+
+3. Скачать файл [dump](https://drive.google.com/file/d/1jOjQZRiV8aXmGtO6YbqDdEedNeJAbA2T/view?usp=sharing) переместить его в папку проекта
 
 
 3. Запустить Docker
