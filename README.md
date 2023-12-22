@@ -26,7 +26,7 @@
 
 ### Демо
 
-![Demo](https://drive.google.com/file/d/1MN22qWdjIzbwTMc68z8G0rCqnS7ZIrh0/view?usp=share_link)
+![Demo](https://drive.google.com/drive/u/0/my-drive)
 
 
 ## Установка и запуск
@@ -48,5 +48,5 @@
 5. Прописать docker-compose up --build
 
 
-6. Зайти на http://127.0.0.1:5000/
+6. Зайти на http://127.0.0.1:5001/
 
