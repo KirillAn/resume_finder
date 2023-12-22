@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./dump:/usr/dump
+    command: ["docker-entrypoint.sh", "mongod", "--bind_ip_all"]
+
+  init-mongo:
+    image: mongo
+    depends_on:
+      - mongodb
+    volumes:
+      - ./dump:/docker-entrypoint-initdb.d
+    command: mongorestore --host mongodb /docker-entrypoint-initdb.d
+
+  flask-app:
+    build:
+      context: .
+    ports:
+      - "5001:5000"
+    depends_on:
+      - init-mongo
+

@@ -1,0 +1,5 @@
+Flask==2.1.0
+sentence-transformers==2.1.0
+pymongo==4.0.1
+Werkzeug==2.2.2
+huggingface-hub==0.10.1
