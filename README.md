@@ -28,6 +28,8 @@
 ### Сравнение моделей
 
 [Модели](https://www.sbert.net/docs/pretrained_models.html)
+
+
 Паттерны:
 
 1) Название: Django разработчик
