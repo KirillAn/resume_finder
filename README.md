@@ -68,7 +68,7 @@
 
 ### Демо
 
-![Demo](https://drive.google.com/drive/u/0/my-drive)
+![Demo]([https://drive.google.com/drive/u/0/my-drive](https://github.com/KirillAn/resume_finder/blob/main/pic/demo.gif))
 
 
 ## Установка и запуск
