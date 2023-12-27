@@ -1,14 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Finder</title>
-    <!-- Preload Lexend fonts -->
     <link rel="preload" href="/wp-content/themes/resumebuilder/assets/font2023/Lexend-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/wp-content/themes/resumebuilder/assets/font2023/Lexend-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/wp-content/themes/resumebuilder/assets/font2023/Lexend-Light.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- Style adjustments -->
     <style>
         body {
             font-family: 'Lexend', sans-serif; /* Updated font family */
@@ -112,16 +111,16 @@
         
         <form method="post">
             <label for="wanna_job">Вакансия:</label>
-            <input type="text" name="wanna_job" required>
+            <input type="text" name="wanna_job" id="wanna_job" value="{{ wanna_job|default('') }}" required>
 
             <label for="expa">Опыт работы:</label>
-            <input type="text" name="expa" required>
+            <input type="text" name="expa" id="expa" value="{{ expa|default('') }}" required>
 
             <label for="city">Город:</label>
-            <input type="text" name="city">
+            <input type="text" name="city" id="city" value="{{ city|default('') }}">
 
             <label for="relocation_ready">
-                <input type="checkbox" name="relocation_ready">
+                <input type="checkbox" name="relocation_ready" id="relocation_ready" {% if relocation_ready %}checked{% endif %}>
                 Готовность к переезду
             </label>
 
@@ -134,12 +133,5 @@
                 {% for result in similar_documents %}
                     <li>
                         <strong>Cosine Similarity:</strong> {{ result.cosine_similarity }}<br>
-                        <strong>Document:</strong> {{ result.document }}<br>
-                        <hr>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </div>
-</body>
-</html>
+                        <strong>Document:</strong> {{ result.document }}
+                  
